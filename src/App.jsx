@@ -33,8 +33,9 @@ function App() {
       className="App page-height"
       style={{
         backgroundImage: `url(${
-          apiData?.weather[0].icon &&
-          `http://openweathermap.org/img/wn/${apiData?.weather[0].icon}@4x.png`
+          apiData?.weather[0].icon
+            ? `http://openweathermap.org/img/wn/${apiData?.weather[0].icon}@4x.png`
+            : "http://openweathermap.org/img/wn/10d@4x.png"
         })`,
       }}
     >
