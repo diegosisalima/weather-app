@@ -1,0 +1,21 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.App .title {
+  font-size: 4rem;
+  text-shadow: 2px 2px 8px black;
+  animation: titleAnimation 1s ease-in-out infinite;
+  animation-direction: alternate;
+}
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(2%);
+  }
+}

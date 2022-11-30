@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Inter:wght@400;600&family=Mouse+Memoirs&display=swap");
+:root {
+  font-family: "Concert One", cursive, Arial, sans-serif;
+  --first-color: #003f5c;
+  --second-color: #43b0f1;
+  --text-color: #ecf0f1;
+
+  --mx-wd-container: 1280px;
+  /* color-scheme: light dark; */
+  background-color: rgb(242, 156, 80);
+}
+/*para ver la teoria revisar "styles.css"*/
+/* <-<-<- RESETEOS ->->->->->->->->->->->->->->->->->->->->->->->->-> */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+body {
+  overflow-x: hidden;
+  color: var(--text-color);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3.2em;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  cursor: pointer;
+  border-color: #646cff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+/* <-<-<- UTILIDADES ->->->->->->->->->->->->->->->->->->->->->->->-> */
+/*box cantainer*/
+.mx-wd-container {
+  margin: 0 auto;
+  max-width: var(--max-width-container);
+}
+/*--Imágenes contenidas-----------------------------------------------*/
+/*imagen*/
+.img-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* object-position: bottom right; */ /*en caso de que object-fit: cover; esto ayuda a posicionar la imagen que es visible*/
+}
+
+/*--contenedor flexible tipo galeria-----------------------------------*/
+.flex-galery {
+  background-color: #fcedf2;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*--Grid contenedor tipo galeria---------------------------------------*/
+.grid-galery {
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 300px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-flow: dense;
+}
+
+.filter {
+  backdrop-filter: blur(12px);
+  background-color: rgba(51, 51, 51, 0.9);
+}
+.hero-image-filter {
+  width: 100%;
+  min-height: 100vh;
+  backdrop-filter: blur(4px) brightness(0.4);
+}
+.page-height {
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  /* border: 1px solid chocolate; */
+}
